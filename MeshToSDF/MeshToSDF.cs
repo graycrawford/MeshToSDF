@@ -83,6 +83,7 @@ public class MeshToSDF : MonoBehaviour
             staticMesh = new Mesh();
         }
         skinnedMeshRenderer = skinnedMeshRenderer ?? GetComponent<SkinnedMeshRenderer>();
+        OnValidate(); // enables SDF within VFXgraph to build... still with memory leak
 
     }
 
